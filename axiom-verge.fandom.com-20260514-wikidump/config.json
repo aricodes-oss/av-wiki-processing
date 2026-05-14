@@ -1,0 +1,25 @@
+{
+    "api": "https://axiom-verge.fandom.com/api.php",
+    "api_chunksize": 50,
+    "curonly": false,
+    "date": "20260514",
+    "delay": 1.5,
+    "exnamespaces": [],
+    "export": "",
+    "failfast": false,
+    "http_method": "POST",
+    "images": true,
+    "index": "https://axiom-verge.fandom.com/index.php",
+    "logs": false,
+    "namespaces": [
+        "all"
+    ],
+    "path": "./axiom-verge.fandom.com-20260514-wikidump",
+    "redirects": false,
+    "retries": 5,
+    "templates": false,
+    "xml": true,
+    "xmlapiexport": false,
+    "xmlrevisions": false,
+    "xmlrevisions_page": false
+}
