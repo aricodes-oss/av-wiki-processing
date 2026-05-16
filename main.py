@@ -6,7 +6,7 @@ from mwxml import Dump
 
 
 def main(args):
-    file_path = args.file
+    file_path = args.input
 
     if os.path.isdir(file_path):
         xml_files = glob.glob(os.path.join(file_path, '*.xml'))
@@ -22,7 +22,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('file', help='Path to the directory containing .xml file', default='wikidump')
+    parser.add_argument('-i', '--input', help='Path to the directory containing .xml file', default='wikidump')
     args = parser.parse_args()
 
     main(args)
