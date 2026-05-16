@@ -1,3 +1,5 @@
+import mwxml
+
 def main():
     print("Hello from av-wiki-process!")
 

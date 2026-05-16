@@ -4,6 +4,46 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = [
-    "mwxml>=0.3.8",
+dependencies = ["mwxml>=0.3.8"]
+
+[dependency-groups]
+dev = ["bpython>=0.26", "ruff>=0.15.13"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 110
+extend-exclude = ["*/migrations/*"]
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "W",   # pycodestyle warnings
+  "F",   # pyflakes
+  "I",   # isort
+  "B",   # flake8-bugbear
+  "UP",  # pyupgrade
+  "DJ",  # flake8-django
+  "S",   # flake8-bandit (Security)
+  "C4",  # flake8-comprehensions
+  "T20", # flake8-print
+  "N",   # pep8-naming
+  "RUF", # Ruff-specific rules
+  "PL",  # Pylint
+]
+ignore = [
+  "PLR0913", # Too many arguments to function call
+  "S101",    # Use of assert detected (useful for pytest)
+  "RUF012",  # Mutable class attributes (annoying with django-configurations)
+  "S105",    # Hardcoded password (triggered by SECRET_KEY)
+  "T201",    # Allow print statements
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["av-wiki-process"]
+section-order = [
+  "future",
+  "standard-library",
+  "third-party",
+  "first-party",
+  "local-folder",
 ]
